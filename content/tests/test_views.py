@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 
 from content.models import Content
 from content.views import ContentView
+from move_fitness.views import BaseView
 
 
 class ContentViewsTestCase(TestCase):
@@ -17,6 +18,9 @@ class ContentViewsTestCase(TestCase):
 
     def tearDown(self):
         self.activities.delete()
+
+    def test_should_inherit_from_base_view(self):
+        self.assertIn(BaseView, ContentView.__bases__)
 
     def test_should_request_the_view_for_a_content_and_be_success(self):
         response = ContentView.as_view()(self.request, slug=self.activities.slug)
@@ -33,7 +37,7 @@ class ContentViewUrlsTestCase(TestCase):
         self.activities = Content.objects.create(
             title="Activities",
             description="Lorem ipsum dolor sit amet.",
-            slug="activities"
+            slug="atividades"
         )
         self.client.get(reverse("content", args=[self.activities.slug]))
 

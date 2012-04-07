@@ -51,13 +51,26 @@
 
 /* #Basic Styles
 ================================================== */
-	body {
-		background: #fff;
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
- }
+body {
+    background: #fff;
+    font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+.menu {
+    background-color: #262626;
+    height: 35px;
+    padding-top: 15px;
+    text-align: right;
+}
+
+menu li {
+    display: inline;
+    color: #fff;
+    margin: 0 20px 0 20px;
+}
 
 
 /* #Typography

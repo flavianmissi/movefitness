@@ -1,0 +1,30 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Move Fitness {% block title %}{% endblock %}</title>
+
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/base.css" />
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/skeleton.css" />
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="menu">
+            <menu class="container">
+                {% for content in content_list %}
+                    <li>{{ content.title }}</li>
+                {% endfor %}
+            </menu>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+        {% block javascript %}
+        {% endblock %}
+    </body>
+</html>

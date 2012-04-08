@@ -14,17 +14,34 @@
         {% endblock %}
     </head>
     <body>
-        <div class="menu">
+        <div class="menu-wrapper">
             <menu class="container">
-                {% for content in content_list %}
-                    <li>{{ content.title }}</li>
-                {% endfor %}
+                <!--{% for content in content_list %}-->
+                <!--<li><a href="{% url content content.slug %}">{{ content.title }}</a></li>-->
+                <!--{% endfor %}-->
+                <li><a href="{% url content 'nossas-instalacoes' %}">Nossas Instalações</a></li>
+                <li><a href="{% url content 'atividades' %}">Atividades</a></li>
+                <li><a href="{% url content 'noticias' %}">Notícias</a></li>
+                <li><a href="{% url content 'parceiros' %}">Parceiros</a></li>
+                <li class="last-item"><a href="{% url content 'contato' %}">Contato</a></li>
+                <li class="facebook"><a href="http://facebook.com"></a></li>
+                <li class="twitter"><a href="http://twitter.com"></a></li>
             </menu>
         </div>
-        {% block content %}
-        {% endblock %}
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
 
         {% block javascript %}
         {% endblock %}
+
+        <footer>
+            <div class="footer-top"></div>
+            <div class="container">
+                <p> Academia Move Fitness &reg; - 2011 - Todos os direitos reservados.  </p>
+                <p class="uau-impressos-logo"></p>
+            </div>
+        </footer>
     </body>
 </html>

@@ -59,7 +59,7 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-.menu {
+.menu-wrapper {
     background-color: #262626;
     height: 35px;
     padding-top: 15px;
@@ -68,13 +68,74 @@ body {
 
 menu li {
     display: inline;
-    color: #fff;
-    margin: 0 20px 0 20px;
+    margin: 0 14px 0 14px;
 }
 
+menu li.last-item {
+    margin-right: 50px;
+}
+
+.footer-top {
+    background-color: #dddddd;
+    height: 8px;
+    box-shadow: 0px 0px 3px 1px #cacaca;
+}
+
+footer {
+    background-color: #f6f6f6;
+    height: 68px;
+}
+
+footer p {
+    margin-top: 15px;
+    color: #9a9898;
+}
+
+footer p.uau-impressos-logo {
+    position: absolute;
+    top: -11px;
+    right: 0;
+    background: url(/static/images/sprite_base.png) -75px -5px;
+    width: 110px;
+    height: 15px;
+}
 
 /* #Typography
 ================================================== */
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+}
+
+menu li a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.13em;
+}
+
+menu li a:hover, menu li a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+menu li.facebook a, menu li.twitter a {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    top: -5px;
+}
+
+menu li.facebook a {
+    right: 52px;
+    background: url(/static/images/sprite_base.png) -37px 0;
+}
+
+menu li.twitter a {
+    right: 1px;
+    background: url(/static/images/sprite_base.png);
+}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
 		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;

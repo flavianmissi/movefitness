@@ -7,5 +7,8 @@ class Activity(models.Model):
     description = models.TextField()
     slug = models.SlugField()
 
+    class Meta:
+        verbose_name_plural = "activities"
+
     def __unicode__(self):
         return self.title

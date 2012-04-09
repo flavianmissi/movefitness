@@ -20,3 +20,6 @@ class ActivitiesModelTestCase(TestCase):
     def test_unicode_should_return_activity_title(self):
         activity = Activity(title="Some Activity", description="test", slug="some-activity")
         self.assertEqual(u"Some Activity", unicode(activity))
+
+    def test_verbose_name_plural_should_return_activities(self):
+        self.assertEqual(u"activities", unicode(Activity._meta.verbose_name_plural))

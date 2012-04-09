@@ -1,4 +1,4 @@
-from django.test import TestCase, RequestFactory
+from django.test import TestCase
 
 from content.models import Content
 from move_fitness.views import BaseView
@@ -12,14 +12,10 @@ class BaseViewTestCase(TestCase):
             description="bar",
             slug="foo"
         )
-        self.request = RequestFactory().get('base-view')
-        self.response = BaseView.as_view()(self.request, slug=self.content.slug)
 
     def tearDown(self):
         self.content.delete()
 
-    def test_should_get_and_be_success(self):
-        self.assertEqual(200, self.response.status_code)
-
     def test_should_have_all_contents_in_context(self):
-        self.assertIsInstance(self.response.context_data["content_list"][0], Content)
+        context_data = BaseView().get_context_data()
+        self.assertIsInstance(context_data["content_list"][0], Content)

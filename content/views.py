@@ -1,10 +1,10 @@
-#from django.views.generic import DetailView
+from django.views.generic import DetailView
 
 from content.models import Content
 from move_fitness.views import BaseView
 
 
-class ContentView(BaseView):
+class ContentView(BaseView, DetailView):
     model = Content
 
     def get_template_names(self):

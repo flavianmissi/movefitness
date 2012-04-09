@@ -7,5 +7,5 @@ class BaseView:
 
     def get_context_data(self, *args, **kwargs):
         context = {}
-        context['content_list'] = self.model.objects.all()
+        context['content_list'] = self.model.objects.all().values("title")
         return context

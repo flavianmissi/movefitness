@@ -13,6 +13,14 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+    #     'NAME': 'movefitness',                      # Or path to database file if using sqlite3.
+    #     'USER': 'root',                      # Not used with sqlite3.
+    #     'PASSWORD': '',                  # Not used with sqlite3.
+    #     'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+    #     'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'movefitness.db',                      # Or path to database file if using sqlite3.
@@ -30,7 +38,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -130,6 +138,7 @@ INSTALLED_APPS = (
     'content',
     'activities',
     'our_installations',
+    'partners',
     'south',
     'django_nose',
 )

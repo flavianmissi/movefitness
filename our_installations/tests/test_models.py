@@ -14,6 +14,9 @@ class OurInstallationsModelTestCase(TestCase):
     def test_should_have_a_description(self):
         self.assertFieldPresence(OurInstallations, "title")
 
+    def test_should_have_a_slug_field(self):
+        self.assertFieldPresence(OurInstallations, "slug")
+
     def test_unicode_should_return_the_title(self):
         installation = OurInstallations(title="foo")
         self.assertEqual(u'foo', unicode(installation))

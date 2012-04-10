@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from our_installations.models import OurInstallation
+from our_installations.models import OurInstallations
 
 
-class OurInstallationAdmin(admin.ModelAdmin):
+class OurInstallationsAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(OurInstallation, OurInstallationAdmin)
+admin.site.register(OurInstallations, OurInstallationsAdmin)

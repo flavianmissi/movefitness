@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'content',
     'activities',
+    'our_installations',
     'south',
     'django_nose',
 )

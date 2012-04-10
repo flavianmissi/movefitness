@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+
+class OurInstallation(models.Model):
+
+    photo = models.ImageField(upload_to="our_installation")
+    title = models.CharField(max_length=150)
+
+    def __unicode__(self):
+        return self.title

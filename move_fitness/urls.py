@@ -2,14 +2,14 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from content.views import ContentView
+from activities.views import ActivitiesView
 
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^(?P<slug>[\w-]+)?/$', ContentView.as_view(), name='content'),
+    url(r'atividades?/$', ActivitiesView.as_view(), name='activities'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,8 +1,8 @@
-from django.test import TestCase
 from django.contrib import admin
+from django.test import TestCase
 
-from partners.models import Partner
 from partners.admin import PartnerAdmin
+from partners.models import Partner
 
 
 class PartnerAdminTestCase(TestCase):

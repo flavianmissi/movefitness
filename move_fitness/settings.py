@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'our_installations',
     'partners',
     'social',
+    'contact',
     'south',
     'django_nose',
 )

@@ -1,8 +1,8 @@
-from django.test import TestCase
 from django.contrib import admin
+from django.test import TestCase
 
-from our_installations.models import OurInstallations
 from our_installations.admin import OurInstallationsAdmin
+from our_installations.models import OurInstallations
 
 
 class OurInstallationsAdminTestCase(TestCase):

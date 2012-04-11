@@ -1,15 +1,16 @@
+from django.core.urlresolvers import reverse
 from django.test import TestCase, RequestFactory
 
 from content.models import Content
 from partners.models import Partner
-from partners.views import PartnerView
+from partners.views import PartnersView
 
 
-class PartnerViewTestCase(TestCase):
+class PartnersViewTestCase(TestCase):
 
     def setUp(self):
         self.request = RequestFactory().get('partners')
-        self.response = PartnerView.as_view()(self.request)
+        self.response = PartnersView.as_view()(self.request)
         self.content = Content.objects.create(title="foo", description="bar")
         self.partner = Partner.objects.create(name="uau.impressos")
 
@@ -25,3 +26,13 @@ class PartnerViewTestCase(TestCase):
 
     def test_should_have_partners_list_in_content(self):
         self.assertEqual("uau.impressos", self.response.context_data["partners"][0].name)
+
+    def test_should_use_partners_template(self):
+        self.assertIn("partners.html", self.response.template_name)
+
+
+class PartnersViewUrlTestCase(TestCase):
+
+    def test_should_request_and_be_success(self):
+        response = self.client.get(reverse("partners"))
+        self.assertEqual(200, response.status_code)

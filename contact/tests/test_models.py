@@ -16,3 +16,7 @@ class ContactModelTestCase(TestCase):
 
     def test_should_have_a_business_hours_field(self):
         self.assertFieldPresence(Contact, "business_hours")
+
+    def test_unicode_should_return_address(self):
+        contact = Contact(address="foo")
+        self.assertEqual(u"foo", unicode(contact))

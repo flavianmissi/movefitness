@@ -1,10 +1,50 @@
 {% extends "base.html" %}
 
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/activities.css" />
+{% endblock %}
+
 {% block content %}
-    <section>
+    <section class="four column">
+        <div class="move-fitness-logo"></div>
+        <div class="activities">
+            <ul id="activities-menu">
+            {% for activity in activities %}
+                <li>
+                    <a href="#" class="activity-item column">{{ activity.title }}</a>
+                    <div class="arrow column"></div>
+                    <div class="clear-fix"></div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
     </section>
-    <section>
+    <section class="twelve column content">
         <h3>{{ content.title }}</h3>
         <p>{{ content.description }}</p>
     </section>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+window.onload = function() {
+    var menu_item_class = "arrow column"
+
+    var mouseOver = function(e) {
+        e.target.nextSibling.nextSibling.className += " active";
+    }
+
+    var mouseOut = function(e) {
+        e.target.nextSibling.nextSibling.className = menu_item_class;
+    }
+
+    var links = document.getElementById("activities-menu").getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("mouseover", mouseOver);
+        links[i].addEventListener("mouseout", mouseOut);
+    }
+}
+//]]>
+</script>
 {% endblock %}

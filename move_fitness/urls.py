@@ -13,11 +13,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'atividades?/$', ActivitiesView.as_view(), name='activities'),
-    url(r'nossas-instalacoes?/$', OurInstallationsView.as_view(), name='our_installations'),
-    url(r'parceiros?/$', PartnersView.as_view(), name='partners'),
-    url(r'noticias?/$', SocialView.as_view(), name='social'),
-    url(r'contato?/$', ContactView.as_view(), name='contact'),
+    url(r'atividades/$', ActivitiesView.as_view(), name='activities'),
+    url(r'nossas-instalacoes/$', OurInstallationsView.as_view(), name='our_installations'),
+    url(r'parceiros/$', PartnersView.as_view(), name='partners'),
+    url(r'noticias/$', SocialView.as_view(), name='social'),
+    url(r'contato/$', ContactView.as_view(), name='contact'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

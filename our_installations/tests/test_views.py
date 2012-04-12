@@ -10,7 +10,8 @@ class OurInstallationsViewsTestCase(TestCase):
 
     def setUp(self):
         self.installation = OurInstallations.objects.create(
-            title="main entrance"
+            title="main entrance",
+            slug="main-entrance"
         )
         self.content = Content.objects.create(title="foo", description="bar")
         self.our_installations = Content.objects.create(
@@ -32,8 +33,12 @@ class OurInstallationsViewsTestCase(TestCase):
         self.assertEqual(self.response.context_data['content_list'][0]['title'], "foo")
 
     def test_should_have_the_our_installations_content_in_context(self):
-        self.assertEqual(self.response.context_data['content'][0].title, "Our Installations")
-        self.assertEqual(self.response.context_data['content'][0].description, "Lorem ipsum.")
+        self.assertEqual(self.response.context_data['content'].title, "Our Installations")
+        self.assertEqual(self.response.context_data['content'].description, "Lorem ipsum.")
+
+    def test_should_have_installations_list_in_context(self):
+        self.assertEqual(self.response.context_data['installations_list'][0].title, "main entrance")
+        self.assertEqual(self.response.context_data['installations_list'][0].slug, "main-entrance")
 
     def test_should_use_our_installations_template(self):
         self.assertIn("our_installations.html", self.response.template_name)

@@ -52,11 +52,38 @@
 /* #Basic Styles
 ================================================== */
 body {
-    background: #fff;
+    background: #F6F6F6;
     font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font: 14px/21px "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; */
     color: #444;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.content-wrapper {
+    background: #fff;
+}
+
+.content-wrapper .container {
+    padding: 20px 0;
+}
+
+.container .move-fitness-logo {
+    background: url(/static/images/sprite_base.png) -184px top;
+    width: 225px;
+    height: 143px;
+}
+
+section.content {
+    margin: 120px 0 0 100px !important;
+}
+
+section  .move-fitness-logo{
+    margin-bottom: 35px;
 }
 
 .menu-wrapper {
@@ -149,7 +176,7 @@ menu li.twitter a {
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 20px 0; }
+	/* p { margin: 0 0 20px 0; } */
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
@@ -231,7 +258,7 @@ menu li.twitter a {
 	  margin-bottom: 20px;
 	  line-height: normal;
 	  padding: 8px 10px;
-	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+	  font-family: "Georgia", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 	.button:hover,
 	button:hover,

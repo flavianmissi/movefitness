@@ -16,25 +16,24 @@
     <body>
         <div class="menu-wrapper">
             <menu class="container">
-                <!--{% for content in content_list %}-->
-                <!--<li><a href="{% url content content.slug %}">{{ content.title }}</a></li>-->
-                <!--{% endfor %}-->
-                <li><a href="{% url content 'nossas-instalacoes' %}">Nossas Instalações</a></li>
-                <li><a href="{% url content 'atividades' %}">Atividades</a></li>
-                <li><a href="{% url content 'noticias' %}">Notícias</a></li>
-                <li><a href="{% url content 'parceiros' %}">Parceiros</a></li>
-                <li class="last-item"><a href="{% url content 'contato' %}">Contato</a></li>
+                <!--{#% for content in content_list %#}-->
+                <!--<li><a href="{#% url content content.slug %#}">{{ content.title }}</a></li>-->
+                <!--{#% endfor %#}-->
+                <li><a href="{% url our_installations %}">Nossas Instalações</a></li>
+                <li><a href="{% url activities %}">Atividades</a></li>
+                <li><a href="{% url social %}">Notícias</a></li>
+                <li><a href="{% url partners %}">Parceiros</a></li>
+                <li class="last-item"><a href="{% url contact %}">Contato</a></li>
                 <li class="facebook"><a href="http://facebook.com"></a></li>
                 <li class="twitter"><a href="http://twitter.com"></a></li>
             </menu>
         </div>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
+        <div class="content-wrapper">
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
-
-        {% block javascript %}
-        {% endblock %}
 
         <footer>
             <div class="footer-top"></div>
@@ -43,5 +42,9 @@
                 <p class="uau-impressos-logo"></p>
             </div>
         </footer>
+
+        {% block javascript %}
+        {% endblock %}
+
     </body>
 </html>

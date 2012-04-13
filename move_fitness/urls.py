@@ -4,6 +4,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from activities.views import ActivitiesView
 from contact.views import ContactView
+from index.views import IndexView
 from our_installations.views import OurInstallationsView
 from partners.views import PartnersView
 from social.views import SocialView
@@ -18,6 +19,7 @@ urlpatterns = patterns('',
     url(r'parceiros/$', PartnersView.as_view(), name='partners'),
     url(r'noticias/$', SocialView.as_view(), name='social'),
     url(r'contato/$', ContactView.as_view(), name='contact'),
+    url(r'^/?$', IndexView.as_view(), name='index'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

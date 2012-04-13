@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.test import TestCase, RequestFactory
 
 from content.models import Content
@@ -30,4 +31,8 @@ class IndexViewTestCase(TestCase):
         self.assertEqual(self.image.description, self.response.context_data["images_list"][0].description)
 
 
+class IndexViewUrlsTestCase(TestCase):
 
+    def test_should_get_and_be_success(self):
+        response = self.client.get(reverse("index"))
+        self.assertEqual(200, response.status_code)

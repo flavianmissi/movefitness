@@ -1,1 +1,13 @@
 {% extends 'base.html' %}
+
+{% block content %}
+    <section class="five columns">
+        <div class="move-fitness-logo"><a href="{% url index %}"></a></div>
+        <p>{{ contact.address }}</p>
+        <p>Tel.:{{ contact.phone }}</p>
+        <p>Horário de Funcionamento</p>
+        <p>{{ contact.business_hours }}</p>
+    </section>
+    <section class="nine columns content">
+    </section>
+{% endblock %}

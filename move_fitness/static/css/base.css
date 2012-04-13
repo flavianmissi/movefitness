@@ -82,8 +82,13 @@ section.content {
     margin: 120px 0 0 100px !important;
 }
 
-section  .move-fitness-logo{
+section .move-fitness-logo {
     margin-bottom: 35px;
+}
+
+section .move-fitness-logo a {
+    display: block;
+    height: 100%;
 }
 
 .menu-wrapper {

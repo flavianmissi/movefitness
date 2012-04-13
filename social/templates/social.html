@@ -1,1 +1,17 @@
 {% extends 'base.html' %}
+
+{% block content %}
+    <section class="five columns">
+        <div class="move-fitness-logo"></div>
+    </section>
+    <section class="nine columns content">
+        <h3>{{ content.title }}</h3>
+        <p>{{ content.description }}</p>
+    </section>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ STATIC_PREFIX }}/js/mootools-core-1.4.5-full-compat-yc.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ STATIC_PREFIX }}/js/mootools-more-1.4-full.js" type="text/javascript" charset="utf-8"></script>
+({url: 'http://twitter.com/statuses/user_timeline/flaviamissi.json?callback=?', onSuccess: function(data){console.log(data)}})
+{% endblock %}

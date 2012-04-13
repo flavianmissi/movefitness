@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -20,6 +21,8 @@ urlpatterns = patterns('',
     url(r'noticias/$', SocialView.as_view(), name='social'),
     url(r'contato/$', ContactView.as_view(), name='contact'),
     url(r'^/?$', IndexView.as_view(), name='index'),
+
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT})
 )
 
 urlpatterns += staticfiles_urlpatterns()

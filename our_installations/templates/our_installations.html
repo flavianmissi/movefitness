@@ -1,1 +1,29 @@
 {% extends 'base.html' %}
+
+{% block css %}
+    <!--<link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/activities.css" />-->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/slimbox/slimbox-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/slimbox/slimbox.css" />
+{% endblock %}
+
+{% block content %}
+    <section class="four column">
+        <div class="move-fitness-logo"></div>
+        {% for installation in installations_list %}
+            <a rel="lightbox-atomium">
+                <img src="{{ installation.photo.url }}" title="{{ installation.title }}" />
+            </a>
+        {% endfor %}
+    </section>
+
+    <section class="twelve column content">
+        <h3>{{ content.title }}</h3>
+        <p>{{ content.description }}</p>
+    </section>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ STATIC_PREFIX }}js/mootools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ STATIC_PREFIX }}js/slimbox.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ STATIC_PREFIX }}js/slimbox/autoload.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}

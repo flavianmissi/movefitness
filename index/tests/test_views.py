@@ -3,24 +3,6 @@ from django.test import TestCase, RequestFactory
 from content.models import Content
 from index.models import Image
 from index.views import IndexView
-from move_fitness.views import BaseView
-
-
-class BaseViewTestCase(TestCase):
-
-    def setUp(self):
-        self.content = Content.objects.create(
-            title="foo",
-            description="bar",
-            slug="foo"
-        )
-
-    def tearDown(self):
-        self.content.delete()
-
-    def test_should_have_all_content_titles_in_context(self):
-        context_data = BaseView().get_context_data()
-        self.assertEqual(context_data["content_list"][0]["title"], self.content.title)
 
 
 class IndexViewTestCase(TestCase):
@@ -45,4 +27,7 @@ class IndexViewTestCase(TestCase):
         self.assertEqual("foo", self.response.context_data["content_list"][0]["title"])
 
     def test_should_have_a_list_of_images(self):
-        self.assertEqual(self.image.description, self.response.context_data["index_images"][0].description)
+        self.assertEqual(self.image.description, self.response.context_data["images_list"][0].description)
+
+
+

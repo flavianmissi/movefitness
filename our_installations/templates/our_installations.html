@@ -1,22 +1,26 @@
 {% extends 'base.html' %}
 
 {% block css %}
-    <!--<link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/activities.css" />-->
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/slimbox/slimbox-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/installations.css" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/slimbox/slimbox.css" />
 {% endblock %}
 
 {% block content %}
-    <section class="four column">
+    <section class="four columns">
         <div class="move-fitness-logo"></div>
-        {% for installation in installations_list %}
-            <a rel="lightbox-atomium">
-                <img src="{{ installation.photo.url }}" title="{{ installation.title }}" />
-            </a>
-        {% endfor %}
+        <div class="thumbs">
+            {% for installation in installations_list %}
+                <div class="thumb column">
+                    <a rel="lightbox-atomium" href="{{ installation.photo.url }}">
+                        <img class="two columns" src="{{ installation.photo.url }}" title="{{ installation.title }}" />
+                    </a>
+                </div>
+            {% endfor %}
+                <div class="clear-fix"></div>
+        </div>
     </section>
 
-    <section class="twelve column content">
+    <section class="ten columns content">
         <h3>{{ content.title }}</h3>
         <p>{{ content.description }}</p>
     </section>

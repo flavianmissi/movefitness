@@ -1,1 +1,11 @@
 {% extends "base.html" %}
+
+{% block content %}
+    <section class="five columns">
+        <div class="move-fitness-logo"><a href="{% url index %}"></a></div>
+    </section>
+    <section class="nine columns content">
+        <h3>{{ content.title }}</h3>
+        <p>{{ content.description }}</p>
+    </section>
+{% endblock %}

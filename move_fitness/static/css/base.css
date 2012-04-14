@@ -104,7 +104,8 @@ menu li {
 }
 
 menu li.last-item {
-    margin-right: 50px;
+    padding-right: 50px;
+    margin-right: 0px;
 }
 
 .footer-top {
@@ -143,7 +144,6 @@ footer p {
 menu li a {
     color: #fff;
     text-decoration: none;
-    letter-spacing: 0.13em;
 }
 
 menu li a:hover, menu li a:visited {

@@ -1,0 +1,47 @@
+#slideshow-container  {
+    width:512px;
+    height:384px;
+    position:relative;
+}
+
+#slideshow-container .img-element {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 640px;
+    width: 560px;
+}
+
+#slideshow-container .img-element .description {
+    font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 330px;
+    left: -330px;
+    width: 190px;
+    white-space: pre-line;
+    text-align: right;
+}
+
+#slideshow-container .img-element .description .quote {
+    font-family: "Palatino Linotype", Helvetica, Arial, sans-serif;
+    font-size: 90px;
+}
+
+#slideshow-container .img-element .description .quote.left {
+    float: left;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+
+#slideshow-container .img-element .description .quote.right {
+    float: right;
+    margin-right: -35px;
+}
+
+section.content {
+    margin: 0 !important;
+    padding-left: 140px;
+    height: 605px;
+}

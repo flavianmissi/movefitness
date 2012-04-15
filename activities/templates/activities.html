@@ -11,7 +11,7 @@
             <ul id="activities-menu">
             {% for activity in activities %}
                 <li>
-                    <a href="#" class="activity-item column">{{ activity.title }}</a>
+                    <a href="{% url activity activity.slug %}" class="activity-item column">{{ activity.title }}</a>
                     <div class="arrow column"></div>
                     <div class="clear-fix"></div>
                 </li>

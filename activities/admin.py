@@ -4,7 +4,7 @@ from activities.models import Activity
 
 
 class ActivityAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(Activity, ActivityAdmin)

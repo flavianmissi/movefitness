@@ -4,7 +4,7 @@ from content.models import Content
 
 
 class ContentAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(Content, ContentAdmin)

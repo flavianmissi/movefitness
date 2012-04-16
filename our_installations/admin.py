@@ -4,7 +4,7 @@ from our_installations.models import OurInstallations
 
 
 class OurInstallationsAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(OurInstallations, OurInstallationsAdmin)

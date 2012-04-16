@@ -30,4 +30,18 @@
     <script src="{{ STATIC_PREFIX }}js/mootools.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ STATIC_PREFIX }}js/slimbox.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ STATIC_PREFIX }}js/slimbox/autoload.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+    //<![CDATA[
+    window.addEvent('domready', function() {
+        var imgs = $$(".thumb.column img");
+        var origClass = "two columns"
+        imgs.addEvent("mouseover", function(e) {
+            e.target.className += " active";
+        });
+        imgs.addEvent("mouseout", function(e) {
+            e.target.className = origClass;
+        });
+    });
+    //]]>
+    </script>
 {% endblock %}

@@ -18,3 +18,8 @@ section .thumb img {
     height: 63px;
     margin: 0 !important;
 }
+
+section .thumb img.active {
+    opacity: 0.5;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}

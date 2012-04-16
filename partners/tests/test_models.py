@@ -11,6 +11,9 @@ class PartnersModelTestCase(TestCase):
     def test_should_have_a_name_field(self):
         self.assertFieldPresence(Partner, "name")
 
+    def test_should_have_a_url_field(self):
+        self.assertFieldPresence(Partner, "url")
+
     def test_should_have_a_logo_field(self):
         self.assertFieldPresence(Partner, "logo")
 

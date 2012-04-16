@@ -98,12 +98,13 @@ section .move-fitness-logo a {
     text-align: right;
 }
 
-menu ul {
-}
-
 menu li {
     display: inline-block;
     margin: 15px 14px 0 14px;
+}
+
+menu li.active a {
+    color: #ec1d23 !important;
 }
 
 menu li.last-item {

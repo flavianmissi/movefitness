@@ -1,4 +1,5 @@
 {% load static %}
+{% load menu %}
 {% get_static_prefix as STATIC_PREFIX %}
 <!DOCTYPE html>
 <html>
@@ -17,11 +18,11 @@
         <div class="menu-wrapper">
             <menu class="container">
                 <ul>
-                    <li><a href="{% url our_installations %}">Nossas Instalações</a></li>
-                    <li><a href="{% url activities %}">Atividades</a></li>
-                    <li><a href="{% url social %}">Notícias</a></li>
-                    <li><a href="{% url partners %}">Parceiros</a></li>
-                    <li class="last-item"><a href="{% url contact %}">Contato</a></li>
+                    <li class="{% is_active request.path 'our_installations' %}"><a href="{% url our_installations %}">Nossas Instalações</a></li>
+                    <li class="{% is_active request.path 'activities' %}"><a href="{% url activities %}">Atividades</a></li>
+                    <li class="{% is_active request.path 'social' %}"><a href="{% url social %}">Notícias</a></li>
+                    <li class="{% is_active request.path 'partners' %}"><a href="{% url partners %}">Parceiros</a></li>
+                    <li class="last-item {% is_active request.path 'contact' %}"><a href="{% url contact %}">Contato</a></li>
                     <li class="facebook"><a href="http://facebook.com"></a></li>
                     <li class="twitter"><a href="http://twitter.com"></a></li>
                 </ul>

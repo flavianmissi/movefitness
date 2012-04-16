@@ -1,3 +1,4 @@
+#coding: utf-8
 from django.test import TestCase
 
 from our_installations.models import OurInstallations
@@ -22,4 +23,4 @@ class OurInstallationsModelTestCase(TestCase):
         self.assertEqual(u'foo', unicode(installation))
 
     def test_should_pluralize_correctly_the_model_name(self):
-        self.assertEqual(u'our installations', unicode(OurInstallations._meta.verbose_name_plural))
+        self.assertEqual(u'nossas instalações', unicode(OurInstallations._meta.verbose_name_plural))

@@ -93,39 +93,44 @@ section .move-fitness-logo a {
 
 .menu-wrapper {
     background-color: #262626;
-    height: 35px;
-    padding-top: 15px;
+    height: 50px;
+    /* padding-top: 15px; */
     text-align: right;
 }
 
+menu ul {
+}
+
 menu li {
-    /* display: inline; */
     display: inline-block;
-    margin: 0 14px 0 14px;
+    margin: 15px 14px 0 14px;
 }
 
 menu li.last-item {
-    padding-right: 50px;
+    padding-right: 20px;
     margin-right: 0px;
 }
 
 menu li.facebook, menu li.twitter {
     width: 30px;
+    height: 28px;
+    margin-top: 10px;
+    float: right;
 }
 
 menu li.facebook a, menu li.twitter a {
     /* position: absolute; */
     width: 30px;
     height: 28px;
-    /* top: -5px; */
+    display: inline-block;
 }
 
-menu li.facebook a {
+menu li.facebook {
     /* right: 52px; */
     background: url(/static/images/sprite_base.png) -37px 0;
 }
 
-menu li.twitter a {
+menu li.twitter {
     /* right: 1px; */
     background: url(/static/images/sprite_base.png);
 }

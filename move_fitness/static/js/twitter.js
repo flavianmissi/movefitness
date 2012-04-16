@@ -19,7 +19,6 @@ var TwitterGitter = new Class({
 
     //get it!
     retrieve: function() {
-        console.log("oi");
         that = this;
         new Request.JSONP({
             url: 'http://twitter.com/statuses/user_timeline/' + that.username + '.json',
@@ -34,8 +33,7 @@ var TwitterGitter = new Class({
                     data.each(function(tweet) { tweet.text = that.linkify(tweet.text); }, that);
                 }
                 //complete!
-                //this.fireEvent('complete', [data, data[0].user]);
-                this.fireEvent('complete', [data, "foooooo"]);
+                this.fireEvent('complete', [data, data[0].user]);
             }.bind(this)
         }).send();
         return this;

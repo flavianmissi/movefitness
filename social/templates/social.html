@@ -7,11 +7,18 @@
     <section class="nine columns content">
         <h3>{{ content.title }}</h3>
         <p>{{ content.description }}</p>
-        <div id="tweets"></div>
+    </section>
+    <section class="row">
+        <div id="tweets">
+            <!--<a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">-->
+            <!--    Follow {{ content.twitter }}-->
+            <!--</a>-->
+        </div>
         <div id="facebook">
             <div class="fb-like" data-href="http://google.com" data-send="true" data-width="450" data-show-faces="true"></div>
         </div>
     </section>
+    <div id="fb-root"></div>
 {% endblock %}
 
 {% block javascript %}
@@ -29,12 +36,17 @@ window.addEvent('domready', function() {
             count: 5,
             onComplete: function(tweets, user) {
                 tweets.each(function(tweet, i) {
+                    var html = '<img src="' + user.profile_image_url.replace("\\", '') + '" align="left" alt="' + user.name + '" /> <strong>' + user.name + '</strong><br />' + tweet.text + '<br /><span>' + tweet.created_at + ' via ' + tweet.source.replace("\\", '') + '</span>';
                     new Element('div', {
-                        html: '<img src="' + user.profile_image_url.replace("\\", '') + '" align="left" alt="' + user.name + '" /> <strong>' + user.name + '</strong><br />' + tweet.text + '<br /><span>' + tweet.created_at + ' via ' + tweet.source.replace("\\", '') + '</span>', 'class': 'tweet clear'
+                        'class': 'tweet',
+                        html: html
                     }).inject('tweets');
                 });
             }
         }).retrieve();
+
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;

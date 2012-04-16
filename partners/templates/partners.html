@@ -15,7 +15,9 @@
     <section class="partners">
         {% for partner in partners %}
             <div class="four columns">
-                <img src="{{ partner.logo.url }}" />
+                <a href="{{ partner.url }}">
+                    <img src="{{ partner.logo.url }}" />
+                </a>
             </div>
         {% endfor %}
     </section>

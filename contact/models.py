@@ -1,11 +1,12 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class Contact(models.Model):
 
-    address = models.CharField(max_length=350)
-    phone = models.CharField(max_length=50)
-    business_hours = models.TextField()
+    address = models.CharField(max_length=350, verbose_name=_("address"))
+    phone = models.CharField(max_length=50, verbose_name=_("photo"))
+    business_hours = models.TextField(verbose_name=_("business hours"))
 
     def __unicode__(self):
         return self.address

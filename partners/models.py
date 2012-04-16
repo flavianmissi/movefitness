@@ -8,5 +8,8 @@ class Partner(models.Model):
     url = models.URLField()
     logo = models.ImageField(upload_to="partners")
 
+    class Meta:
+        verbose_name_plural = _("partners")
+
     def __unicode__(self):
         return self.name

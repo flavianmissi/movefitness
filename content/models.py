@@ -8,5 +8,8 @@ class Content(models.Model):
     description = models.TextField(verbose_name=_("description"))
     slug = models.SlugField()
 
+    class Meta:
+        verbose_name_plural = _("contents")
+
     def __unicode__(self):
         return self.title

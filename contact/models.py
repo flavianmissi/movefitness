@@ -8,5 +8,8 @@ class Contact(models.Model):
     phone = models.CharField(max_length=50, verbose_name=_("photo"))
     business_hours = models.TextField(verbose_name=_("business hours"))
 
+    class Meta:
+        verbose_name_plural = _("contacts")
+
     def __unicode__(self):
         return self.address

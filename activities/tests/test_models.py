@@ -22,4 +22,4 @@ class ActivitiesModelTestCase(TestCase):
         self.assertEqual(u"Some Activity", unicode(activity))
 
     def test_verbose_name_plural_should_return_activities(self):
-        self.assertEqual(u"activities", unicode(Activity._meta.verbose_name_plural))
+        self.assertEqual(u"atividades", unicode(Activity._meta.verbose_name_plural))

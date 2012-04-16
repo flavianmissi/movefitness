@@ -10,5 +10,8 @@ class Social(models.Model):
         verbose_name=_("social networking"))
     profile = models.CharField(max_length=255, verbose_name=_("profile"))
 
+    class Meta:
+        verbose_name_plural = _("socials")
+
     def __unicode__(self):
         return "%s/%s" % (self.social_networking, self.profile)

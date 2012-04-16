@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-16 00:30-0300\n"
+"POT-Creation-Date: 2012-04-16 01:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,3 +29,7 @@ msgstr "foto"
 #: models.py:9
 msgid "business hours"
 msgstr "horário de funcionamento"
+
+#: models.py:12
+msgid "contacts"
+msgstr ""

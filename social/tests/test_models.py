@@ -14,6 +14,13 @@ class SocialModelTestCase(TestCase):
     def test_should_have_a_profile_field(self):
         self.assertFieldPresence(Social, "profile")
 
+    def test_should_return_a_dictionary_when_call_call_as_dict(self):
+        twitter = Social.objects.create(social_networking="twitter", profile="flaviamissi")
+        social_dict = Social.all_as_dict()
+        twitter.delete()
+
+        self.assertEqual("flaviamissi", social_dict["twitter"])
+
     def test_unicode_should_return_social_network_and_profile_field(self):
         social = Social(social_networking="facebook", profile="someprofile")
         self.assertEqual("facebook/someprofile", unicode(social))

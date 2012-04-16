@@ -15,3 +15,11 @@ class Social(models.Model):
 
     def __unicode__(self):
         return "%s/%s" % (self.social_networking, self.profile)
+
+    @classmethod
+    def all_as_dict(cls):
+        records = {}
+        social = Social.objects.all()
+        for obj in social:
+            records[obj.social_networking] = obj.profile
+        return records

@@ -12,11 +12,7 @@ class SocialView(BaseView, ListView):
     def get_context_data(self, *args, **kwargs):
         context = ListView.get_context_data(self, *args, **kwargs)
         context.update(BaseView.get_context_data(self, *args, **kwargs))
-        context["social"] = {}
-
-        social = Social.objects.all()
-        for obj in social:
-            context["social"][obj.social_networking] = obj.profile
+        context["social"] = Social.all_as_dict()
 
         news = Content.objects.filter(slug="noticias")
         if news.exists():

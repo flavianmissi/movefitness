@@ -23,8 +23,8 @@
                     <li class="{% is_active request.path 'social' %}"><a href="{% url social %}">Notícias</a></li>
                     <li class="{% is_active request.path 'partners' %}"><a href="{% url partners %}">Parceiros</a></li>
                     <li class="last-item {% is_active request.path 'contact' %}"><a href="{% url contact %}">Contato</a></li>
-                    <li class="facebook"><a href="http://facebook.com"></a></li>
-                    <li class="twitter"><a href="http://twitter.com"></a></li>
+                    <li class="facebook"><a target="_blank" href="{{ social.facebook }}"></a></li>
+                    <li class="twitter"><a target="_blank" href="http://twitter.com/{{ social.twitter }}"></a></li>
                 </ul>
             </menu>
         </div>
@@ -39,7 +39,7 @@
             <div class="footer-top"></div>
             <div class="container">
                 <p> Academia Move Fitness &reg; - 2011 - Todos os direitos reservados.  </p>
-                <p class="uau-impressos-logo"></p>
+                <p class="uau-impressos-logo"><a target="_blank" href="http://www.uauimpressos.com"></a></p>
             </div>
         </footer>
 

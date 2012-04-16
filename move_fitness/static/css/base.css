@@ -162,6 +162,11 @@ footer p.uau-impressos-logo {
     height: 15px;
 }
 
+footer p.uau-impressos-logo a {
+    display: block;
+    height: 100%;
+}
+
 /* #Typography
 ================================================== */
 

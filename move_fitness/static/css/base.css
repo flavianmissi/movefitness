@@ -79,7 +79,7 @@ body {
 }
 
 section.content {
-    margin: 120px 0 0 100px !important;
+    margin: 40px 0 0 100px !important;
 }
 
 section .move-fitness-logo {
@@ -99,7 +99,8 @@ section .move-fitness-logo a {
 }
 
 menu li {
-    display: inline;
+    /* display: inline; */
+    display: inline-block;
     margin: 0 14px 0 14px;
 }
 
@@ -107,6 +108,28 @@ menu li.last-item {
     padding-right: 50px;
     margin-right: 0px;
 }
+
+menu li.facebook, menu li.twitter {
+    width: 30px;
+}
+
+menu li.facebook a, menu li.twitter a {
+    /* position: absolute; */
+    width: 30px;
+    height: 28px;
+    /* top: -5px; */
+}
+
+menu li.facebook a {
+    /* right: 52px; */
+    background: url(/static/images/sprite_base.png) -37px 0;
+}
+
+menu li.twitter a {
+    /* right: 1px; */
+    background: url(/static/images/sprite_base.png);
+}
+
 
 .footer-top {
     background-color: #dddddd;
@@ -149,23 +172,6 @@ menu li a {
 menu li a:hover, menu li a:visited {
     color: #fff;
     text-decoration: none;
-}
-
-menu li.facebook a, menu li.twitter a {
-    position: absolute;
-    width: 30px;
-    height: 28px;
-    top: -5px;
-}
-
-menu li.facebook a {
-    right: 52px;
-    background: url(/static/images/sprite_base.png) -37px 0;
-}
-
-menu li.twitter a {
-    right: 1px;
-    background: url(/static/images/sprite_base.png);
 }
 
 	h1, h2, h3, h4, h5, h6 {

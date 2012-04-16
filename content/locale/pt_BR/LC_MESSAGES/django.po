@@ -28,4 +28,4 @@ msgstr "descrição"
 
 #: models.py:12
 msgid "contents"
-msgstr ""
+msgstr "conteúdos"

@@ -32,4 +32,4 @@ msgstr "horário de funcionamento"
 
 #: models.py:12
 msgid "contacts"
-msgstr ""
+msgstr "contatos"

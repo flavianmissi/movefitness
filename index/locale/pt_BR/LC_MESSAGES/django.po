@@ -28,4 +28,4 @@ msgstr "foto"
 
 #: models.py:11
 msgid "images"
-msgstr ""
+msgstr "imagens"

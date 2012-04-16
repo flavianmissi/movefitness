@@ -24,4 +24,4 @@ msgstr "nome"
 
 #: models.py:12
 msgid "partners"
-msgstr ""
+msgstr "parceiros"

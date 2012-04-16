@@ -28,4 +28,4 @@ msgstr "perfil"
 
 #: models.py:14
 msgid "socials"
-msgstr ""
+msgstr "mídias sociais"

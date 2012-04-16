@@ -20,8 +20,8 @@ msgstr ""
 
 #: models.py:10
 msgid "social networking"
-msgstr ""
+msgstr "rede social"
 
 #: models.py:11
 msgid "profile"
-msgstr ""
+msgstr "perfil"

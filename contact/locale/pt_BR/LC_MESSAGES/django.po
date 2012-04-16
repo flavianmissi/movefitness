@@ -20,12 +20,12 @@ msgstr ""
 
 #: models.py:7
 msgid "address"
-msgstr ""
+msgstr "endereço"
 
 #: models.py:8
 msgid "photo"
-msgstr ""
+msgstr "foto"
 
 #: models.py:9
 msgid "business hours"
-msgstr ""
+msgstr "horário de funcionamento"

@@ -20,8 +20,8 @@ msgstr ""
 
 #: models.py:7
 msgid "description"
-msgstr ""
+msgstr "descrição"
 
 #: models.py:8
 msgid "photo"
-msgstr ""
+msgstr "foto"

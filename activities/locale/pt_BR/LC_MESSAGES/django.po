@@ -20,12 +20,12 @@ msgstr ""
 
 #: models.py:7
 msgid "title"
-msgstr ""
+msgstr "título"
 
 #: models.py:8
 msgid "description"
-msgstr ""
+msgstr "descrição"
 
 #: models.py:12
 msgid "activities"
-msgstr ""
+msgstr "atividades"

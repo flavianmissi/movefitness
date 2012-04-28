@@ -58,6 +58,7 @@ body {
     color: #444;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+    letter-spacing: 1.3px;
 }
 
 .clear-fix {

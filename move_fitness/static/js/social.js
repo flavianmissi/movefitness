@@ -11,13 +11,11 @@ window.addEvent('domready', function() {
 new TWTR.Widget({
     version: 2,
     type: 'profile',
-    search: 'MoveFitnessRJ',
+    rpp: 4,
     interval: 30000,
-    title: '',
-    id: 'tweets',
-    subject: 'Siga-nos no twitter',
-    width: 300,
-    height: 310,
+    width: 250,
+    height: 300,
+    
     theme: {
         shell: {
             background: '#8ec1da',

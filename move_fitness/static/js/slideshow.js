@@ -1,4 +1,4 @@
-window.addEvent('domready',function() {
+window.addEvent('domready', function() {
     /* settings */
     var showDuration = 3000;
     var container = $('slideshow-container');
@@ -13,7 +13,6 @@ window.addEvent('domready',function() {
         }
     });
 
-    console.log("fooooo");
     /* worker */
     var show = function() {
         imgContainers[currentIndex].fade('out');

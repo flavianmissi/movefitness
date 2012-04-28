@@ -23,8 +23,8 @@ msgid "address"
 msgstr "endereço"
 
 #: models.py:8
-msgid "photo"
-msgstr "foto"
+msgid "phone"
+msgstr "telefone"
 
 #: models.py:9
 msgid "business hours"

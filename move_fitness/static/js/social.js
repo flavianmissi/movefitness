@@ -9,30 +9,29 @@ window.addEvent('domready', function() {
 });
 
 new TWTR.Widget({
-    version: 2,
-    type: 'search',
-    search: '{{ social.twitter }}',
-    interval: 30000,
-    title: '',
-    id: 'tweets',
-    subject: 'Siga-nos no twitter',
-    width: 300,
-    height: 310,
-    theme: {
-        shell: {
-            background: '#8ec1da',
-            color: '#ffffff'
-        },
-        tweets: {
-            background: '#ffffff',
-            color: '#444444',
-            links: '#1985b5'
-        }
-    },
-    features: {
-        scrollbar: false,
-        loop: true,
-        live: true,
-        behavior: 'default'
-    }
-}).render().start();
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 250,
+  height: 300,
+  id: 'tweets',
+  subject: 'Siga-nos no twitter',
+  theme: {
+      shell: {
+          background: '#8ec1da',
+          color: '#ffffff'
+      },
+      tweets: {
+          background: '#ffffff',
+          color: '#444444',
+          links: '#1985b5'
+      }
+  },
+  features: {
+      scrollbar: false,
+      loop: true,
+      live: true,
+      behavior: 'default'
+  }
+}).render().setUser('MoveFitnessRJ').start();

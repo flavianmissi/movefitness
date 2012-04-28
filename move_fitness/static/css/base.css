@@ -53,11 +53,12 @@
 ================================================== */
 body {
     background: #F6F6F6;
-    font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 14px/21px Oxygen, Helvetica, Arial, sans-serif;
     /* font: 14px/21px "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; */
     color: #444;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
+    letter-spacing: 1.3px;
 }
 
 .clear-fix {
@@ -66,6 +67,7 @@ body {
 
 .content-wrapper {
     background: #fff;
+    min-height: 450px;
 }
 
 .content-wrapper .container {
@@ -180,14 +182,19 @@ menu li a {
     text-decoration: none;
 }
 
-menu li a:hover, menu li a:visited {
+menu li a:hover{
+    color: #ec1d23 !important;
+    text-decoration: none;
+}
+
+menu li a:visited {
     color: #fff;
     text-decoration: none;
 }
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
+		font-family: Oxygen, Helvetica, Arial, sans-serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}

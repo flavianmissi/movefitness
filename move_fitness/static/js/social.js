@@ -15,6 +15,8 @@ new TWTR.Widget({
   interval: 30000,
   width: 250,
   height: 300,
+  id: 'tweets',
+  subject: 'Siga-nos no twitter',
   theme: {
       shell: {
           background: '#8ec1da',

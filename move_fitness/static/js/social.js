@@ -11,7 +11,7 @@ window.addEvent('domready', function() {
 new TWTR.Widget({
     version: 2,
     type: 'search',
-    search: '{{ social.twitter }}',
+    search: 'MoveFitnessRJ',
     interval: 30000,
     title: '',
     id: 'tweets',

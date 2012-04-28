@@ -67,6 +67,7 @@ body {
 
 .content-wrapper {
     background: #fff;
+    min-height: 450px;
 }
 
 .content-wrapper .container {

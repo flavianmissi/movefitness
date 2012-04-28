@@ -10,7 +10,7 @@ window.addEvent('domready', function() {
 
 new TWTR.Widget({
     version: 2,
-    type: 'search',
+    type: 'profile',
     search: 'MoveFitnessRJ',
     interval: 30000,
     title: '',
@@ -35,4 +35,4 @@ new TWTR.Widget({
         live: true,
         behavior: 'default'
     }
-}).render().start();
+}).render().setUser('MoveFitnessRJ').start();

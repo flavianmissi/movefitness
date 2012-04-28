@@ -107,10 +107,6 @@ menu li.active a {
     color: #ec1d23 !important;
 }
 
-menu li a:hover {
-    color: #ec1d23 !important;
-}
-
 menu li.last-item {
     padding-right: 20px;
     margin-right: 0px;
@@ -184,7 +180,12 @@ menu li a {
     text-decoration: none;
 }
 
-menu li a:hover, menu li a:visited {
+menu li a:hover{
+    color: #ec1d23 !important;
+    text-decoration: none;
+}
+
+menu li a:visited {
     color: #fff;
     text-decoration: none;
 }

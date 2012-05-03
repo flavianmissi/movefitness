@@ -7,11 +7,14 @@
         <title>Move Fitness {% block title %}{% endblock %}</title>
 
         <meta charset="utf-8" />
-        
+
         <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/base.css" />
         <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/layout.css" />
         <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/skeleton.css" />
+        <!--[if lt IE 9]>
+        <script src="{{ STATIC_PREFIX }}js/html5shiv.js" type="text/javascript" charset="utf-8"></script>
+        <![endif]-->
         {% block css %}
         {% endblock %}
     </head>

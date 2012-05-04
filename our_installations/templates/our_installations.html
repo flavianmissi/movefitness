@@ -11,7 +11,7 @@
         <div class="thumbs">
             {% for installation in installations_list %}
                 <div class="thumb column">
-                    <a onclick="" rel="lightbox-atomium" href="{{ installation.photo.url }}">
+                    <a onclick="" rel="lightbox-atomium" href="{{ installation.photo.url }}" title="{{ installation.title }}">
                         <img class="two columns" src="{{ installation.photo.url }}" title="{{ installation.title }}" />
                     </a>
                 </div>

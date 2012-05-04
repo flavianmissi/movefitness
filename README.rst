@@ -27,3 +27,4 @@ The renderization process searchs for the record's slug. For example, if you hav
 Then, when the `domain.com/activities` is called, the view will search for a template named `activities.html` inside
 `content/templates` directory. It means that whenever you create a new content record, all you need to do to create a new
 page for it is create a new template and inherit from the `base.html` template.
+

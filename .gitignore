@@ -2,3 +2,4 @@
 *.db
 *.pyc
 media
+.DS_Store

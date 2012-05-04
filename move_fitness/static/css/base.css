@@ -75,7 +75,7 @@ body {
 }
 
 .container .move-fitness-logo {
-    background: url(/static/images/sprite_base.png) -184px top;
+    background: url(/static/images/sprite_base.png) -184px top no-repeat;
     width: 225px;
     height: 143px;
 }
